@@ -1,0 +1,145 @@
+.button {
+    padding: 16px 24px;
+    background: #0072BE;
+    color: white;
+    border: NONE;
+}
+
+.button-azul {
+    padding: 16px 24px;
+    background: linear-gradient(86.09deg, #0072BE 0%, #2EB4FF 100%);
+    color: white;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid #0072BE;
+        color: #0072BE;
+        background: transparent;
+
+        & path {
+            d: path("M 8 9 L 12 5 M 12 5 L 8 1 M 12 5 L 4.76995e-8 5");
+            stroke: #0072BE;
+        }
+    }
+
+    & path {
+        d: path("M 8 9 L 12 5 M 12 5 L 8 1 M 12 5 L 4.76995e-8 5");
+        stroke: white;
+    }
+}
+
+.p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #252525;
+    line-height: 135%;
+
+    @media(max-width: 1600px) {
+        font-size: 16px;
+    }
+}
+
+.p-light {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: white;
+
+    @media(max-width: 1600px) {
+        font-size: 16px;
+    }
+}
+
+.h2-light {
+    color: white;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 95%;
+
+    @media(max-width: 1600px) {
+        font-size: 38px;
+    }
+
+    @media(max-width: 992px) {
+        font-size: 45px;
+    }
+}
+
+.h2-blue {
+    font-weight: 700;
+    font-size: 90px;
+    background: linear-gradient(90deg, #0072BE 0%, #2EB4FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    --text-fill-color: transparent;
+
+    @media(max-width: 1600px) {
+        font-size: 80px;
+    }
+
+    @media(max-width: 1300px) {
+        font-size: 56px;
+    }
+}
+
+.h6 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #252525;
+
+    @media(max-width: 1600px) {
+        font-size: 18px;
+    }
+
+    @media(max-width: 1400px) {
+        font-size: 16px;
+    }
+}
+
+.h4 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 135%;
+}
+
+header {
+    & .button {
+        padding: 16px 24px;
+        background: #0072BE;
+        color: white;
+        border: NONE;
+    }
+
+    & .button::before {
+        content: "Fale com um especialista";
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: white;
+
+        @media(max-width: 1600px) {
+            font-size: 16px;
+        }
+
+        @media(max-width: 1200px) {
+            content: "Especialistas";
+        }
+    }
+
+
+    & .p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        color: white;
+
+        @media(max-width: 1600px) {
+            font-size: 16px;
+        }
+    }
+}

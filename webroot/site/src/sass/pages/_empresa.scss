@@ -1,0 +1,54 @@
+#empresa {
+    z-index: 0;
+}
+
+.empresa {
+    & .h2-blue {
+        font-size: 40px !important;
+    }
+
+    & .banner-footer {
+        margin-bottom: -160px;
+    }
+
+    & .valores {
+        @media(min-width: 992px) {
+            margin-top: 140px;
+        }
+
+        & .item {
+            padding: 10px 16px;
+            box-shadow: 0px 10px 22px rgb(0 0 0 / 30%);
+            margin-bottom: 50px;
+        }
+
+        & .h2-blue {
+            font-size: 40px !important;
+        }
+    }
+
+    & .item {
+        background-color: #eaeaea;
+    }
+
+    /* & img {
+        padding: 5px;
+        border-radius: 50%;
+        // background-color: red;
+        box-shadow: 0px 10px 22px rgb(0 0 0 / 30%);
+    }*/
+    & .consultoria-swiper {
+        margin-top: -2px;
+    }
+
+    & .swiper {
+
+        & .swiper-button-next,
+        .swiper-button-prev {
+            --swiper-navigation-size: 20px;
+            --swiper-theme-color: white;
+            padding: 18px;
+            background: linear-gradient(86.09deg, #0072BE 0%, #2EB4FF 100%);
+        }
+    }
+}
