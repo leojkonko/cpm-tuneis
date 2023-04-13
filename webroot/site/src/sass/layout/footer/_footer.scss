@@ -1,0 +1,213 @@
+// Estilos do footer
+footer {
+    position: relative;
+    z-index: 0;
+    background-color: initial !important;
+
+    & .site,
+    .copyright {
+        padding-left: 14%;
+
+        @media(min-width: 992px)and(max-width: 1200px) {
+            padding-left: 6%;
+        }
+
+        @media(max-width:992px) {
+            padding-left: 0px;
+        }
+    }
+
+    & .copyright,
+    .politica {
+        @media(max-width: 992px) {
+            padding-left: initial !important;
+            margin: auto;
+        }
+
+        margin-bottom: 0px;
+    }
+
+    a {
+        width: 366px;
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 135%;
+
+        @media(max-width:1600px) {
+            font-size: 16px;
+        }
+
+        @media(max-width:1200px) {
+            width: 300px;
+        }
+
+        &:hover {
+            color: #dad6d6;
+        }
+    }
+
+    & .img-logo {
+        width: 75%;
+    }
+
+    .bg-azul {
+        background-image: url(../images/backgrounds/footer.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        & .site {
+
+            & li {
+                list-style: none;
+                margin-bottom: 15px;
+            }
+        }
+
+        & .infos {
+            margin: 0px 5px;
+
+            & .redes {
+                & .rede-link {
+                    width: 54px;
+                    transform: scale(1.0);
+                    transition: transform 0.2s ease-in-out;
+
+                    & svg {
+                        padding: 10px;
+                        border-radius: 50%;
+                        //padding: 10px 11px 11px 11px;
+                        border: 1px solid white;
+                    }
+
+                    &:hover {
+                        transform: scale(1.1);
+                        transition: transform 0.2s ease-in-out;
+                    }
+                }
+            }
+
+            & .svg-alinhamento {
+                margin-left: 20px;
+            }
+        }
+    }
+
+    & .politica {
+        border-bottom: 1px solid white;
+    }
+
+    & .botao-whatsapp {
+        $botao-whatsapp-color: rgb(26, 202, 35);
+        $zindex-botao-whatsapp: 990;
+        box-shadow: $box-shadow;
+        @include linear-rfs(2rem, 2.25rem, 320px, 1920px);
+        width: 1em;
+        height: 1em;
+        box-sizing: content-box;
+        padding: .33em;
+        isolation: isolate;
+        color: $white;
+        background-color: $botao-whatsapp-color;
+        transition: $transition-base;
+
+        &:hover {
+            color: $white;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0%;
+            height: 0%;
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            transition: $transition-base;
+            z-index: -1;
+            @include gradient-directional(darken($botao-whatsapp-color, 10), lighten($botao-whatsapp-color, 10), 50deg);
+            border-radius: 9999px;
+        }
+
+        @include media-hover {
+            box-shadow: $box-shadow-lg;
+
+            &::after {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+            }
+        }
+
+        &-wrapper {
+            z-index: $zindex-botao-whatsapp;
+        }
+
+        &-hoverable {
+            display: none;
+
+            @media (hover: hover) {
+                display: flex;
+            }
+        }
+
+        &-not-hoverable {
+            display: none;
+
+            @media (hover: none) {
+                display: flex;
+            }
+        }
+    }
+
+    .btn-bandeira {
+        background-color: transparent;
+        border: none;
+    }
+
+    & .botao-whatsapp-wrapper {
+        & .show {
+
+            & .path {
+                d: path("M5 14L10 9L15 14");
+                transition: d 0.25s ease-in-out;
+            }
+        }
+
+        & .path {
+            d: path("M5 9.00525L10 14.0052L15 9.00525");
+            transition: d 0.25s ease-in-out;
+        }
+    }
+
+    & .idiomas {
+        position: fixed;
+        left: 0;
+        bottom: 10%;
+        //display: flex;
+        flex-direction: column;
+
+
+        & .link {
+            width: initial;
+            margin: 0.5px 0px;
+            padding: 10px 20px;
+            border-radius: 0px 10px 10px 0px;
+            background-color: rgba(0, 0, 0, 0.5);
+            transform: scale(1.0);
+            transition: transform 0.2s ease-in-out;
+
+            & img {
+                width: 40px;
+                height: 40px;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+}
